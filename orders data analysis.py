@@ -32,9 +32,9 @@ df['Ship Mode'].unique()
 
 
 #rename columns names ..make them lower case and replace space with underscore
-#df.rename(columns={'Order Id':'order_id', 'City':'city'})
-#df.columns=df.columns.str.lower()
-#df.columns=df.columns.str.replace(' ','_')
+df.rename(columns={'Order Id':'order_id', 'City':'city'})
+df.columns=df.columns.str.lower()
+df.columns=df.columns.str.replace(' ','_')
 df.head(5)
 
 
@@ -42,8 +42,8 @@ df.head(5)
 
 
 #derive new columns discount , sale price and profit
-#df['discount']=df['list_price']*df['discount_percent']*.01
-#df['sale_price']= df['list_price']-df['discount']
+df['discount']=df['list_price']*df['discount_percent']*.01
+df['sale_price']= df['list_price']-df['discount']
 df['profit']=df['sale_price']-df['cost_price']
 df
 
